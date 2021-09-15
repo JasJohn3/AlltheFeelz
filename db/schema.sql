@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS  postdb;
+DROP DATABASE IF EXISTS  allthefeelsdb;
 
-CREATE DATABASE  postdb;
+CREATE DATABASE  allthefeelsdb;
