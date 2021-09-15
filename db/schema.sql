@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS  allthefeelsdb;
+DROP DATABASE IF EXISTS  allthefeelzdb;
 
-CREATE DATABASE  allthefeelsdb;
+CREATE DATABASE  allthefeelzdb;

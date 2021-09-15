@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
   // expects {title: 'Feeling Rough!', message: 'It was a difficult day today!', user_id: 1}
   Post.create({
     title: req.body.title,
-    subject: req.body.message,
+    message: req.body.message,
     user_id: req.body.user_id
   })
     .then(dbPostData => res.json(dbPostData))
