@@ -12,7 +12,12 @@ Post.init(
       primaryKey: true,
       autoIncrement: true
     },
-    subject: {
+    title:
+    {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    message: {
       type: DataTypes.STRING,
       allowNull: false
     },
