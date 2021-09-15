@@ -1,6 +1,6 @@
-const router = reqire('express').Router();
+const router = require('express').Router();
 
-const {User, Post} = require('../../models');
+const {User} = require('../../models/User');
 
 router.get('/',(req,res)=>{
   User.findAll({
@@ -16,3 +16,5 @@ router.get('/',(req,res)=>{
     res.status(500).json(err);
   })
 })
+
+module.exports = router;
