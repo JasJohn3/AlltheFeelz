@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // expects {title: 'Feeling Rough!', message: 'It was a difficult day today!', user_id: 1}
+  // expects {"title": 'Feeling Rough!', "message": 'It was a difficult day today!', "user_id": 1}
   Post.create({
     title: req.body.title,
     message: req.body.message,
