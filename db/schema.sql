@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS  postdb;
+
+CREATE DATABASE  postdb;
