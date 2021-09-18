@@ -8,7 +8,12 @@ router.get('/journal', (req, res) => {
   res.render('journal');
 });
 
-router.get('/login',(req,res)=>{
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
   res.render('login');
 });
 
