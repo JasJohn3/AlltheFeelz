@@ -16,4 +16,8 @@ router.get('/signup',(req,res)=>{
   res.render('signup');
 });
 
+router.get('/posts', (req, res) => {
+  res.render('allposts')
+})
+
 module.exports = router;
