@@ -9,7 +9,7 @@
 </head>
 
 <div>
-    <h1 class="center-align">IN DEVELOPMENT...</h1>
+    <h3 class="center-align">ALL POSTS</h3>
 </div>
 
 <div class="card teal lighten-1  white-text">
@@ -22,10 +22,7 @@
         📋 {{message}}
     </p>
     <p>
-        👤 {{user.username}}
-    </p>
-    <p>
-        {{ created_at }}
+        👤 {{user.username}} | Posted @ {{ format_date created_at }}
     </p>
 
     {{/each}}
