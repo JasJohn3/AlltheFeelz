@@ -3,7 +3,7 @@ const { Post, User } = require('../models');
 // sessionkey from utils folder
 // const tempAuth = require('../')
 
-// get all posts for http://localhost:3001/posts/ ----------------------
+// get all posts for http://localhost:3001/posts/all ----------------------
 router.get('/all', (req, res) => {
     Post.findAll({
         attributes: [
