@@ -11,30 +11,23 @@
 </head>
 
 <div> 
-    <h1 class="center-align">IN DEVELOPMENT</h1>    
+    <h1 class="center-align">IN DEVELOPMENT...</h1>    
 </div>
 
-<div>
-    {{#each posts}}
+<div class="card teal lighten-1  white-text">
+    {{#each posts as |posts|}}
 
-    <h2>
+    <h3 class="teal darken-2">
         {{title}}
-    </h2>
+    </h3>
     <p>
-        {{message}}
+        📋 {{message}}
     </p>
-    
-    {{/each}}
-</div>
-
-<div>
-    {{#each posts}}
-
-    <h2>
-        {{title}}
-    </h2>
     <p>
-        {{message}}
+        👤 {{user.username}}
+    </p>
+    <p>
+        {{created_at}}
     </p>
     
     {{/each}}
