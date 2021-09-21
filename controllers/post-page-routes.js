@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
         ],
     }).then(postdata => {
         const posts = postdata.map((post) => post.get({ plain: true }));
-        res.render('allposts', {
+        res.render('posts', {
             layout: "main",
             posts
         })
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
         ],
     }).then(postdata => {
         const posts = postdata.map((post) => post.get({ plain: true }));
-        res.render('allposts', {
+        res.render('posts', {
             layout: "main",
             posts
         })
