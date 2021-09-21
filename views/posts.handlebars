@@ -12,21 +12,24 @@
     <h3 class="center-align">ALL POSTS</h3>
 </div>
 
-<div class="card teal lighten-1  white-text">
-    {{#each posts as |posts|}}
+<br>
+<div class="container">
+    <div id="posts-row" class="col s12 card teal lighten-1 white-text">
+        {{#each posts as |posts|}}
 
-    <h3 class="teal darken-2">
-        {{title}}
-    </h3>
-    <p>
-        📋 {{message}}
-    </p>
-    <p>
-        👤 {{user.username}} | Posted on {{ format_date created_at }}
-    </p>
-
-    {{/each}}
+        <h3 class="teal darken-2">
+            {{title}}
+        </h3>
+        <p>
+            📋 {{message}}
+        </p>
+        <p>
+            👤 {{user.username}} | Posted on {{ format_date created_at }}
+        </p>
+        {{/each}}
+    </div>
 </div>
+<br>
 
 <script type='text/javascript' src='js/materialize.min.js'></script>
 
