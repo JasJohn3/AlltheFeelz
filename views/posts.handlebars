@@ -1,22 +1,20 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlltheFeelz</title>
 
-    <link 
-        rel='stylesheet'
-        href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
-    />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css' />
 </head>
 
-<div> 
-    <h1 class="center-align">IN DEVELOPMENT...</h1>    
+<div>
+    <h1 class="center-align">IN DEVELOPMENT...</h1>
 </div>
 
 <div class="card teal lighten-1  white-text">
     {{#each posts as |posts|}}
-    
+
     <h3 class="teal darken-2">
         {{title}}
     </h3>
@@ -29,8 +27,10 @@
     <p>
         {{ created_at }}
     </p>
-    
+
     {{/each}}
 </div>
+
 <script type='text/javascript' src='js/materialize.min.js'></script>
+
 </html>
