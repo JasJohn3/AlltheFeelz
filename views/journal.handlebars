@@ -1,4 +1,4 @@
-<html lang='en'>
+ <html lang='en'>
 
     <head>
         <meta charset='UTF-8' />
@@ -14,29 +14,63 @@
        <!--JavaScript at end of body for optimized loading-->
     <script type='text/javascript' src='js/materialize.min.js'></script>
 
-   <section>
-       
-   </section>
+
+    <div class = "feed">
+<section>
+  <form class="postBox">
+    <div>
+      <h4 for="post-title">Title:</h4>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    
+    <div class= "postbox__input">
+      <input type= "text" placeholder= "What's Happening?" id="post-url" name="post-url" class="post-post" />
+    </div>
+    <button type="submit" class="postBox__postButton">Post</button>
+  </form>
+</section>
+
+<div>
+  {{#if posts.length}}
+  {{#each posts as |post|}}
+  <div class="post">
+    <div class="post__avatar">
+      <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" alt="" />
+    </div>
+    <div class="post__body">
+      <div class="post__header">
+        <div class="post__headerText">
+          <h3>
+            {{post.user.username}}
+            <span class="post__headerSpecial"><span>
+                <span>@{{post.user.username}}</span>
+          </h3>
+        </div>
+      </div>
+      <div>
+        <h2>{{post.title}}</h2>
+      </div>
+      <img src="https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03.jpg" alt="" />
+      <div class="post__headerDescription">
+        <p>{{post.message}}</p>
+      </div>
+      <div class="post__footer">
+        <span> 
+          <a href="/edit/{{post.id}}" style="text-decoration: none;" class="material-icons"> edit </a>
+          </span>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  {{/if}}
+</div>
+
+</div>
+
+<script src="/javascript/journal-add-post.js"></script>
+
 
  
-
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
-<script src="/javascript/add-post.js"></script>
-
-
      <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
