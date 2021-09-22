@@ -1,36 +1,35 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlltheFeelz</title>
-
-    <link 
-        rel='stylesheet'
-        href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
-    />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css' />
 </head>
 
-<div> 
-    <h1 class="center-align">IN DEVELOPMENT...</h1>    
+<div>
+    <h3 class="center-align">ALL POSTS</h3>
 </div>
 
-<div class="card teal lighten-1  white-text">
-    {{#each posts as |posts|}}
+<div class="posts-container">
+    <div class="row">
+        <div id="postsrow" class="teal lighten-1 white-text" style="margin-top: 5px; margin-bottom: 5px">
+            {{#each posts as |posts|}}
 
-    <h3 class="teal darken-2">
-        {{title}}
-    </h3>
-    <p>
-        📋 {{message}}
-    </p>
-    <p>
-        👤 {{user.username}}
-    </p>
-    <p>
-        {{created_at}}
-    </p>
-    
-    {{/each}}
+            <h3 class="teal darken-2">
+                {{title}}
+            </h3>
+            <p>
+                📋 {{message}}
+            </p>
+            <p>
+                👤 {{user.username}} | Posted on {{ format_date created_at }}
+            </p>
+            {{/each}}
+        </div>
+    </div>
 </div>
-<script type='text/javascript' src='js/materialize.min.js'></script>
+
+<script type='text/javascript' src='/materilize.js'></script>
+
 </html>
