@@ -2,9 +2,10 @@ const router = require('express').Router();
 const { Post, User } = require('../models');
 // sessionkey from utils folder
 // const tempAuth = require('../')
+const withAuth = require('../utils/auth');
 
 // get all posts for http://localhost:3001/posts/all ----------------------
-router.get('/all', (req, res) => {
+router.get('/all', withAuth, (req, res) => {
     Post.findAll({
         attributes: [
             'id',

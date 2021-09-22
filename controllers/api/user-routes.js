@@ -66,6 +66,7 @@ router.post('/login', (req, res) => {
       email: req.body.email
     }
   }).then(dbUserData => {
+    console.log(dbUserData.id);
     if (!dbUserData) {
       res.status(400).json({ message: 'No user with that email address!' });
       return;
@@ -80,7 +81,7 @@ router.post('/login', (req, res) => {
 
     req.session.save(() => {
       // declare session variables
-      req.session.user_id = dbUserData.id;
+      req.session.userId = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
