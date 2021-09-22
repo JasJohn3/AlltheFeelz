@@ -21,13 +21,12 @@ router.get('/signup',(req,res)=>{
   res.render('signup');
 });
 
-router.get('/posts', (req, res) => {
-  res.render('posts')
-});
+// router.get('/posts', (req, res) => {
+//   res.render('posts')
+// });
 
 router.get('/posts/id', (req, res) =>{
   res.render('posts')
 });
 
-module.exports = router;
 module.exports = router;
