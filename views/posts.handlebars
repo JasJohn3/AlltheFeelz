@@ -13,20 +13,24 @@
 
 <div class="posts-container">
     <div class="row">
-        <div id="postsrow" class="teal lighten-1 white-text" style="margin-top: 5px; margin-bottom: 5px">
-            {{#each posts as |posts|}}
+        {{#each posts as |posts|}}
+        <div class="col s12">
+            <div class="card">
+                <div id="postsrow" class="card-content teal lighten-1 white-text">
 
-            <h3 class="teal darken-2">
-                {{title}}
-            </h3>
-            <p>
-                📋 {{message}}
-            </p>
-            <p>
-                👤 {{user.username}} | Posted on {{ format_date created_at }}
-            </p>
-            {{/each}}
+                    <h3 class="card-title teal darken-2 center-align">
+                        {{title}}
+                    </h3>
+                    <p>
+                        📋 {{message}}
+                    </p>
+                    <p>
+                        👤 {{user.username}} | Posted on {{ format_date created_at }}
+                    </p>
+                </div>
+            </div>
         </div>
+        {{/each}}
     </div>
 </div>
 
