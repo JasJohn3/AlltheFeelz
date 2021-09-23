@@ -3,7 +3,7 @@ async function newFormHandler(event) {
     
     const title = document.querySelector('#title').value;
     const message = document.querySelector('#message').value;
-    console.log(title, message);
+    
     const response = await fetch(`/api/posts`, {
       method: 'post',
       body: JSON.stringify({
@@ -16,8 +16,8 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      console.log('post successful!')
-      // document.location.replace('/');
+
+      document.location.replace('/');
     }
     else {
       alert(response.statusText)
