@@ -1,19 +1,30 @@
-
-
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-image">
+          <img src="/assets/img/mental-health-bg.jpg">
+          <span class="card-title blue-grey darken-4"><span class="red-text accent-2">All<span class="blue-grey-text darken-4">the</span>Feelz</span></span></span>
+          <a id="post" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <div class="row">
+          <div class="input-field col s12">
+            <input id="title" type="text" class="validate">
+            <label for="title">Title</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="message" type="text" class="validate">
+            <label for="message">Message</label>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <div class = "feed">
   <section>
-    <form class="postBox">
-      <div>
-        <h4 for="post-title">Title:</h4>
-        <input type="text" id="post-title" name="post-title" />
-      </div>
-      
-      <div class= "postbox__input">
-        <input type= "text" placeholder= "What's Happening?" id="post-url" name="post-url" class="post-post" />
-      </div>
-      <button type="submit" class="postBox__postButton">Post</button>
-    </form>
+
   </section>
   <div>
     {{#if posts.length}}
@@ -49,7 +60,6 @@
     {{/each}}
     {{/if}}
   </div>
-
 </div>
 
 <script src="/javascript/journal-add-post.js"></script>

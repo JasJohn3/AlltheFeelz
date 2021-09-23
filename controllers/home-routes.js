@@ -20,7 +20,9 @@ router.get('/login', (req, res) => {
 router.get('/signup',(req,res)=>{
   res.render('signup');
 });
-
+router.get('/posts',(req,res)=>{
+  res.render('posts')
+})
 // router.get('/posts', (req, res) => {
 //   res.render('posts')
 // });

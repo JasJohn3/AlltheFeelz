@@ -1,9 +1,9 @@
 async function newFormHandler(event) {
     event.preventDefault();
     
-    const title = document.querySelector('input[name="post-title"]').value;
-    const message = document.querySelector('input[name="message"]').value;
-  
+    const title = document.querySelector('#title').value;
+    const message = document.querySelector('#message').value;
+    console.log(title, message);
     const response = await fetch(`/api/posts`, {
       method: 'post',
       body: JSON.stringify({
@@ -16,11 +16,12 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/');
+      console.log('post successful!')
+      // document.location.replace('/');
     }
     else {
       alert(response.statusText)
     }
   }
   
-  document.querySelector('.postBox__postButton').addEventListener('submit', newFormHandler)
+  document.querySelector('#post').addEventListener('click', newFormHandler)
