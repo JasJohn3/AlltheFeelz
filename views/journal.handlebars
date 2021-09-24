@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     <div class = "feed">
 <section>
@@ -29,29 +30,75 @@
             <span class="post__headerSpecial"><span>
                 <span>@{{post.user.username}}</span>
           </h3>
+=======
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-image">
+          <img src="/assets/img/mental-health-bg.jpg">
+          <span class="card-title blue-grey darken-4"><span class="red-text accent-2">All<span class="blue-grey-text darken-4">the</span>Feelz</span></span></span>
+          <a id="post" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
         </div>
-      </div>
-      <div>
-        <h2>{{post.title}}</h2>
-      </div>
-      <img src="https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03.jpg" alt="" />
-      <div class="post__headerDescription">
-        <p>{{post.message}}</p>
-      </div>
-      <div class="post__footer">
-        <span> 
-          <a href="/edit/{{post.id}}" style="text-decoration: none;" class="material-icons"> edit </a>
-          </span>
+        <div class="card-content">
+          <div class="row">
+          <div class="input-field col s12">
+            <input id="title" type="text" class="validate">
+            <label for="title">Title</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="message" type="text" class="validate">
+            <label for="message">Message</label>
+          </div>
+        </div>
+>>>>>>> develop
+        </div>
       </div>
     </div>
   </div>
-  {{/each}}
-  {{/if}}
+
+<div class = "feed">
+  <section>
+
+  </section>
+  <div>
+    {{#if posts.length}}
+    {{#each posts as |post|}}
+    <div class="post">
+      <div class="post__avatar">
+      </div>
+      <div class="post__body">
+        <div class="post__header">
+          <div class="post__headerText">
+            <h3>
+              {{post.user.username}}
+              <span class="post__headerSpecial"><span>
+                  <span>@{{post.user.username}}</span>
+            </h3>
+          </div>
+        </div>
+        <div>
+          <h2>{{post.title}}</h2>
+        </div>
+        <div class="post__headerDescription">
+          <p>{{post.message}}</p>
+        </div>
+        <div class="post__footer">
+          <span> 
+            <a href="/edit/{{post.id}}" style="text-decoration: none;" class="material-icons"> edit </a>
+            </span>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{/if}}
+  </div>
 </div>
 
-</div>
-
+<<<<<<< HEAD
 
 
  
  
+=======
+<script src="/javascript/journal-add-post.js"></script>
+>>>>>>> develop

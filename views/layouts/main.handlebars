@@ -21,13 +21,13 @@
 
   <body>
   <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">AlltheFeelz</a>
+    <div class="nav-wrapper blue-grey">
+      <a href="#!" class="brand-logo blue-grey darken-4"><span class="red-text accent-2">All<span class="blue-grey-text darken-4">the</span>Feelz</span></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
         <li><a href="/journal">Journal</a></li>
-        <li><a href="/posts">Posts</a></li>
+        <li><a href="/posts/all">Posts</a></li>
         <li><a href="/login">Login</a></li>
         <li><a id="logout" class="btn red waves-effect waves-dark">Logout</a></li>
       </ul>
@@ -38,16 +38,17 @@
   <ul class="sidenav" id="mobile-demo">
         <li><a href="/">Home</a></li>
         <li><a href="/journal">Journal</a></li>
-        <li><a href="/posts">Posts</a></li>
+        <li><a href="/posts/all">Posts</a></li>
+        <li><a href="/login">Login</a></li>
   </ul>
-    <!--JavaScript at end of body for optimized loading-->
-    <script type='text/javascript' src='js/materialize.min.js'></script>
 
     <main>
       <div class="container">
       {{{body}}}
       </div>
     </main>
+    <!--JavaScript at end of body for optimized loading-->
+    {{!-- <script type='text/javascript' src='js/materialize.min.js'></script> --}}
         <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
@@ -56,6 +57,51 @@
       var instances = M.Sidenav.init(elems, {});
       });
     </script>
+      <footer class="page-footer blue-grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">UofA Coding Bootcamp</h5>
+          <p class="grey-text text-lighten-4">
+            We are a small team creating responsive web products.
+          </p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="white-text" href="/">Home</a>
+            </li>
+            <li>
+              <a class="white-text" href="/journal">Journal</a>
+            </li>
+            <li>
+              <a class="white-text" href="/posts/all">Posts</a>
+            </li>
+            <li>
+              <a class="white-text" href="/login">Login</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Jason Johnson</a></li>
+            <li><a class="white-text" href="#!">Walid Khan</a></li>
+            <li><a class="white-text" href="#!">Lucas Wick</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made with <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+      <div class="container white-text">
+        © 2021 AlltheFeelz
+      </div>
+    </div>
+  </footer>
     <script src="/javascript/logout.js"></script>
   </body>
 </html>
