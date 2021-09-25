@@ -47,9 +47,10 @@ router.post('/', (req, res) => {
     password: req.body.password
   })
     .then(dbUserData => {
+      console.log(dbUserData);
       req.session.save(()=>{
         req.session.user_id = dbUserData.id;
-        res.session.username = dbUserData.username;
+        req.session.username = dbUserData.username;
         req.session.loggedIn = true;
         res.json(dbUserData)
       })     
@@ -66,7 +67,7 @@ router.post('/login', (req, res) => {
       email: req.body.email
     }
   }).then(dbUserData => {
-    console.log(dbUserData.id);
+    // console.log(dbUserData.id);
     if (!dbUserData) {
       res.status(400).json({ message: 'No user with that email address!' });
       return;
@@ -78,7 +79,7 @@ router.post('/login', (req, res) => {
       res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
-
+    
     req.session.save(() => {
       // declare session variables
       req.session.userId = dbUserData.id;
